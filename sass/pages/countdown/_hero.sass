@@ -1,13 +1,25 @@
-$reviews-rating-color: #3B9EF0
+$breadcrumbs-color: #7B858E
 $copy-alt-color: #4D545A
+$reviews-rating-color: #3B9EF0
 
 .hero
   background-color: rgba(0,0,0, 0.2)
 
-  .content > img
-    flex: 3
-  .content > div
-    flex: 2
+  h1
+    margin-top: 5px
+
+  .breadcrumbs
+    color: $breadcrumbs-color
+    margin: 0
+
+  .content
+    justify-content: space-between
+
+    & > img
+      width: 59%
+
+    & > div
+      width: 39%
 
   .info
     color: white
