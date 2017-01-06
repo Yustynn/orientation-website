@@ -1,2 +1,34 @@
+$countdown-numbers-color: #7ED321
+$countdown-text-color: #66737D
+
 section.countdown
   background-color: rgba(0,0,0,0.2)
+  padding-bottom: 0
+
+  .container
+    flex-direction: row
+    justify-content: center
+
+  article
+    align-items: center
+    display: flex
+    flex-direction: column
+    padding-right: 50px
+
+    h5
+      color: $countdown-text-color
+      margin: 0
+
+    p
+      display: flex
+      flex-direction: row
+      span
+        background-color: black
+        color: $countdown-numbers-color
+        display: inline-block
+        font-family: "Texas LED"
+        font-size: 48px
+        padding: 15px 15px 5px 10px
+        margin: 0 5px
+        text-align: center
+        width: 60px
