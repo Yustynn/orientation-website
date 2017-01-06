@@ -2289,7 +2289,8 @@ header {
   .main-menu ul li {
     display: inline-block; }
     .main-menu ul li a {
-      color: #4D545A;
+      color: #A9A7A5;
+      font-weight: 600;
       padding-right: 40px;
       text-transform: uppercase; }
 
@@ -2364,7 +2365,9 @@ section.tags li {
   section.tags li i {
     background-color: #091821;
     color: white;
-    padding: 5px 15px; }
+    padding: 5px 0;
+    text-align: center;
+    width: 40px; }
   section.tags li span {
     padding-left: 15px; }
 
@@ -2382,6 +2385,12 @@ section.reviews p {
 
 section.countdown {
   background-color: rgba(0, 0, 0, 0.2); }
+
+section.sponsors h3 {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center; }
 
 main {
   flex: 65%; }
