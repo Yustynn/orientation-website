@@ -24,6 +24,9 @@ header
       padding-right: 40px
       text-transform: uppercase
 
+      &:hover
+        color: white
+
 #apply
   align-self: flex-end
   background-color: $apply-bg-color
@@ -31,3 +34,26 @@ header
   font-size: 14px
   font-weight: 300
   padding: 2px 7px
+
+@media all and (max-width: $breakpoint)
+  header
+    padding: 0
+    
+    .container
+      padding: 0
+
+    .main-menu
+      flex-direction: column
+      padding: 0
+      width: 100%
+
+      ul
+        width: 100%
+
+        li
+          display: block
+        a
+          background: #464646
+          display: block
+          text-align: center
+          padding: 10px

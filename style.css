@@ -2,7 +2,6 @@
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 @import url("assets/fonts/texas-led.ttf");
 @font-face {
   font-family: 'FontAwesome';
@@ -2271,7 +2270,8 @@ ul {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 940px; }
+  max-width: 960px;
+  padding: 0 10px; }
 
 .content {
   display: flex; }
@@ -2294,6 +2294,8 @@ header {
       font-weight: 600;
       padding-right: 40px;
       text-transform: uppercase; }
+      .main-menu ul li a:hover {
+        color: white; }
 
 #apply {
   align-self: flex-end;
@@ -2303,18 +2305,41 @@ header {
   font-weight: 300;
   padding: 2px 7px; }
 
+@media all and (max-width: 690px) {
+  header {
+    padding: 0; }
+    header .container {
+      padding: 0; }
+    header .main-menu {
+      flex-direction: column;
+      padding: 0;
+      width: 100%; }
+      header .main-menu ul {
+        width: 100%; }
+        header .main-menu ul li {
+          display: block; }
+        header .main-menu ul a {
+          background: #464646;
+          display: block;
+          text-align: center;
+          padding: 10px; } }
 .hero {
   background-color: rgba(0, 0, 0, 0.2); }
+  .hero img {
+    max-width: 100%; }
   .hero h1 {
     margin-top: 5px; }
+  .hero p {
+    margin: 5px 0; }
   .hero .breadcrumbs {
     color: #7B858E;
-    margin: 0; }
+    margin: 0;
+    font-size: 12px; }
   .hero .content {
     justify-content: space-between; }
-    .hero .content > img {
+    .hero .content .left {
       width: 59%; }
-    .hero .content > div {
+    .hero .content .right {
       width: 39%; }
   .hero .info {
     color: white; }
@@ -2323,6 +2348,18 @@ header {
   .hero .user-reviews p {
     color: #3B9EF0; }
 
+@media all and (max-width: 690px) {
+  .hero h1 {
+    font-size: 24px;
+    text-align: center; }
+  .hero .content {
+    flex-direction: column; }
+    .hero .content .left, .hero .content .right {
+      display: flex;
+      flex-direction: column;
+      width: auto; }
+    .hero .content p {
+      text-align: center; } }
 section.pricing article {
   margin: 20px 0;
   padding: 0 20px; }
@@ -2356,10 +2393,17 @@ section.about-this-game article {
   display: flex;
   align-items: center; }
 section.about-this-game img {
+  margin-right: 20px;
   height: 65px;
-  width: 65px;
-  margin-right: 20px; }
+  width: 65px; }
 
+@media all and (max-width: 690px) {
+  section.about-this-game article {
+    flex-direction: column; }
+  section.about-this-game img {
+    margin-right: 0;
+    height: 100px;
+    width: 100px; } }
 section.tags li {
   background-color: #193D54;
   color: #438CC0; }
@@ -2395,23 +2439,33 @@ section.countdown {
     display: flex;
     flex-direction: column;
     padding-right: 50px; }
-    section.countdown article h5 {
-      color: #66737D;
-      margin: 0; }
-    section.countdown article p {
-      display: flex;
-      flex-direction: row; }
-      section.countdown article p span {
-        background-color: black;
-        color: #7ED321;
-        display: inline-block;
-        font-family: "Texas LED";
-        font-size: 48px;
-        padding: 15px 15px 5px 10px;
-        margin: 0 5px;
-        text-align: center;
-        width: 60px; }
+  section.countdown h5 {
+    color: #66737D;
+    margin: 0; }
+  section.countdown p {
+    display: flex;
+    flex-direction: row; }
+  section.countdown span {
+    background-color: black;
+    color: #7ED321;
+    display: inline-block;
+    font-family: "Texas LED";
+    font-size: 48px;
+    padding: 15px 15px 5px 10px;
+    margin: 0 5px;
+    text-align: center;
+    width: 60px; }
 
+@media all and (max-width: 690px) {
+  section.countdown article {
+    padding-right: 10px; }
+  section.countdown span {
+    font-size: 24px;
+    padding: 10px 5px 3px 2px;
+    width: 25px;
+    margin: 0 2px; }
+  section.countdown p {
+    margin: 5px 0; } }
 section.sponsors h3 {
   color: white;
   font-size: 14px;
@@ -2426,5 +2480,9 @@ aside {
   aside section {
     background-color: rgba(0, 0, 0, 0.4);
     margin: 20px; }
+
+@media all and (max-width: 700px) {
+  .content {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */

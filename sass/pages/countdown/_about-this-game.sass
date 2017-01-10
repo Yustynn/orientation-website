@@ -5,5 +5,14 @@ section.about-this-game
     align-items: center
 
   img
-    +size(65px)
     margin-right: 20px
+    +size(65px)
+
+@media all and (max-width: $breakpoint)
+  section.about-this-game
+    article
+      flex-direction: column
+
+    img
+      margin-right: 0
+      +size(100px)

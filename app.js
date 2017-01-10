@@ -39,8 +39,6 @@ const updateDigits = (msElapsed = 0) => {
     timeData[t] = getDigits( Math.floor(timeData[t]) );
   })
 
-  console.log(timeData.days)
-
   Object.keys(digits).forEach((timeInterval) => {
     digits[timeInterval].forEach((digit, idx) => {
       digit.textContent = timeData[timeInterval][idx];
